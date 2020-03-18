@@ -1,0 +1,43 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-5">
+          <h4 class="card-title text-muted">Information</h4>
+        </div>
+      </div>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Module</th>
+            <th scope="col" *ngIf="cache.schema">Schema</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">{{cache.name}}</td>
+            <td>{{cache.description}}</td>
+            <td><a routerLink="/{{cache.module.path}}">{{cache.module.name}}</a></td>
+            <td *ngIf="cache.schema"><a routerLink="/{{cache.schema.path}}">{{cache.schema.name}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" [hidden]="!jsonSchema">
+    <div class="card-body">
+      <div class="d-flex justify-content-start align-items-center w-25">
+        <div class="h4 mr-2 text-muted">
+          <i class="{{settings.schema.icon}}" aria-hidden="true"></i>
+        </div>
+        <h4 class="card-title mr-2 text-muted">Cache schema</h4>
+      </div>
+
+      <pre><code [highlight]="jsonSchema"></code></pre>
+    </div>
+  </div>
+
+</div>

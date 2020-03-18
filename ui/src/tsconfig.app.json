@@ -1,0 +1,82 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "esnext",
+    "target": "es5",
+    "resolveJsonModule": true,
+    "types": [],
+    "paths": {
+      "@angular/*": [
+        "../node_modules/@angular/*"
+      ],
+      "api/*" : [
+        "app/api/*",
+        "app/api/domain/*",
+        "app/api/infra/*",
+        "app/api/interfaces/*",
+      ],
+      "cache/*" : [
+        "app/cache/*",
+        "app/cache/domain/*",
+        "app/cache/infra/*",
+        "app/cache/interfaces/*",
+      ],
+      "common/*" : [
+        "app/common/*",
+        "app/common/domain/*",
+        "app/common/infra/*",
+        "app/common/interfaces/*",
+      ],
+      "context/*" : [
+        "app/context/*",
+        "app/context/domain/*",
+        "app/context/infra/*",
+        "app/context/interfaces/*",
+      ],
+      "dashboard/*" : [
+        "app/dashboard/*",
+        "app/dashboard/domain/*",
+        "app/dashboard/infra/*",
+        "app/dashboard/interfaces/*",
+      ],
+      "environments/*" : [
+        "environments/*",
+      ],
+      "module/*" : [
+        "app/module/*",
+        "app/module/domain/*",
+        "app/module/infra/*",
+        "app/module/interfaces/*",
+      ],
+      "schema/*" : [
+        "app/schema/*",
+        "app/schema/domain/*",
+        "app/schema/infra/*",
+        "app/schema/interfaces/*",
+      ],
+      "table/*" : [
+        "app/table/*",
+        "app/table/domain/*",
+        "app/table/infra/*",
+        "app/table/interfaces/*",
+      ],
+      "topic/*" : [
+        "app/topic/*",
+        "app/topic/domain/*",
+        "app/topic/infra/*",
+        "app/topic/interfaces/*",
+      ],
+    }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
+  },
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "**/*.d.ts"
+  ]
+}

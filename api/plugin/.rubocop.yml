@@ -1,0 +1,11 @@
+Style/Documentation:
+    Enabled: false
+
+Metrics/ParameterLists:
+    Enabled: false
+
+Metrics/LineLength:
+    Max: 200
+
+Metrics/AbcSize:
+    Max: 20

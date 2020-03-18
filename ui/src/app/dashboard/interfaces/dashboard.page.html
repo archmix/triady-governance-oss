@@ -1,0 +1,81 @@
+<div class="animated fadeIn">
+  <div class="card-group mb-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="{{settings.context.icon}}"></i>
+        </div>
+        <div class="h4 mb-0">{{dashboard.numberOfContexts}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.context.plural}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="{{settings.module.icon}}"></i>
+        </div>
+        <div class="h4 mb-0">{{dashboard.numberOfModules}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.module.plural}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="{{settings.schema.icon}}"></i>
+        </div>
+        <div class="h4 mb-0">{{dashboard.numberOfSchemas}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.schema.plural}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="{{settings.api.icon}}"></i>
+        </div>
+        <div class="h4 mb-0">{{dashboard.numberOfApis}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.api.plural}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="{{settings.cache.icon}}"></i>
+        </div>
+        <div class="h4 mb-0">{{dashboard.numberOfCaches}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.cache.plural}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="{{settings.table.icon}}"></i>
+        </div>
+        <div class="h4 mb-0">{{dashboard.numberOfTables}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.table.plural}}</small>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="h1 text-muted text-right mb-4">
+          <i class="{{settings.topic.icon}}"></i>
+        </div>
+        <div class="h4 mb-0">{{dashboard.numberOfTopics}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.topic.plural}}</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-columns dashboard-columns">
+    <context-list [data]="contexts"></context-list>
+    <cache-list [data]="caches"></cache-list>
+    
+    <module-list [data]="modules"></module-list>
+    
+    <schema-list [data]="schemas"></schema-list>
+    <table-list [data]="tables"></table-list>
+
+    <api-list [data]="apis"></api-list>
+    <topic-list [data]="topics"></topic-list>
+  </div>
+
+</div>

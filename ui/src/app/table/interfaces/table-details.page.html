@@ -1,0 +1,41 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-5">
+          <h4 class="card-title text-muted">Information</h4>
+        </div>
+      </div>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Module</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">{{table.name}}</td>
+            <td>{{table.description}}</td>
+            <td><a routerLink="/{{table.module.path}}">{{table.module.name}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex justify-content-start align-items-center w-25">
+        <div class="h4 mr-2 text-muted">
+          <i class="{{settings.schema.icon}}" aria-hidden="true"></i>
+        </div>
+        <h4 class="card-title mr-2 text-muted">Table structure schema</h4>
+      </div>
+
+      <pre><code [highlight]="jsonSchema"></code></pre>
+    </div>
+  </div>
+
+</div>

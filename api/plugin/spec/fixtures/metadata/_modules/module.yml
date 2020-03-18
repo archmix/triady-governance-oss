@@ -1,0 +1,7 @@
+---
+contextId: "context"
+moduleName: "Module"
+moduleDescription: "Describe your Module"
+moduleConsumesTopics: "consumed"
+moduleProducesTopics: "produced"
+---

@@ -1,0 +1,6 @@
+---
+moduleId: "module"
+schemaId: "schema"
+cacheName: "Cache"
+cacheDescription: "Describe your Cache"
+---

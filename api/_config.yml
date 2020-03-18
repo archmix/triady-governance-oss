@@ -1,0 +1,23 @@
+title:       Archmix Governance Portal Web API
+baseurl:     "/"
+url:         ""
+exclude:    ["docker-compose.yml", "Dockerfile", "plugin"]
+
+# Build settings
+markdown:          kramdown
+markdown_ext: "yml"
+
+collections:
+  - apis
+  - caches
+  - contexts
+  - modules
+  - schemas
+  - queries
+  - tables
+  - topics
+
+collections_dir: metadata
+disable_disk_cache: true
+
+destination: web-api

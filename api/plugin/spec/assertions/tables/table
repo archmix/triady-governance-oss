@@ -1,0 +1,1 @@
+{"path":"tables/table","id":"table","name":"Table","description":"Describe your Table","schemaFile":"path/to/jsonschema.json","module":{"id":"module","name":"Module","path":"modules/module"}}

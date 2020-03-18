@@ -1,0 +1,1 @@
+{"path":"apis/home","apis":[{"path":"apis/api","id":"api","name":"API","description":"Describe your API","graphQLFile":"path/to/graphql.schema","swaggerFile":"path/to/swagger.yml","module":{"id":"module","name":"Module","path":"modules/module"}}],"numberOfApis":1}

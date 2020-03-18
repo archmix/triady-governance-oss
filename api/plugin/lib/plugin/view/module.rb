@@ -1,0 +1,44 @@
+# frozen_string_literal: true
+
+module Plugin
+  class ModuleView < Renderable
+    def self.create(mod)
+      context = ContextsCollection.instance.get_by_id mod.context_id
+      apis = ApisCollection.instance.get_by_module mod
+      caches = CachesCollection.instance.get_by_module mod
+      tables = TablesCollection.instance.get_by_module mod
+      
+      consumesTopics = []
+      mod.consumesTopics.each do |topic_id|
+        topic = TopicsCollection.instance.get_by_id topic_id
+        consumesTopics.push topic.to_identity
+      end
+
+      producesTopics = []
+      mod.producesTopics.each do |topic_id|
+        topic = TopicsCollection.instance.get_by_id topic_id
+        producesTopics.push topic.to_identity
+      end
+      
+      ModuleView.new(context.to_identity,
+                      mod,
+                      apis.map { |_id, api| api.to_identity },
+                      caches.map { |_id, cache| cache.to_identity },
+                      tables.map { |_id, table| table.to_identity },
+                      consumesTopics, 
+                      producesTopics)
+    end
+
+    def initialize(context, mod, apis, caches, tables, consumesTopics, producesTopics)
+      mod.copy_to_hash self
+      self.delete MetadataFields::CONTEXT_ID
+      
+      self[MetadataFields::CONTEXT] = context
+      self.apis apis
+      self.caches caches
+      self.tables tables
+      self[MetadataFields::CONSUMES_TOPICS] = consumesTopics
+      self[MetadataFields::PRODUCES_TOPICS] = producesTopics
+    end
+  end
+end

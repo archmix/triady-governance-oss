@@ -1,0 +1,11 @@
+type Product {
+  id: ID,
+  name: String,
+  price: BigDecimal
+}
+
+type Query {
+  productById(id: ID): Product
+  productByName(id: String): [Product]
+  productOrderByPrice(): [Product]
+}

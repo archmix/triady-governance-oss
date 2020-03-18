@@ -1,0 +1,33 @@
+<div class="animated fadeIn">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-5">
+          <h4 class="card-title text-muted">Information</h4>
+        </div>
+      </div>
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Schema</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="row">{{topic.name}}</td>
+            <td>{{topic.description}}</td>
+            <td><a routerLink="/{{topic.schema.path}}">{{topic.schema.name}}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card-columns topic-columns">
+    <module-list [data]="topic.consumedBy" label="Consumed By"></module-list>
+    <module-list [data]="topic.producedBy" label="Produced By"></module-list>
+</div>
+
+</div>

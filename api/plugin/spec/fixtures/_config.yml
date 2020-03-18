@@ -1,0 +1,15 @@
+title:       Archmix Governance Portal Web API
+baseurl:     "/"
+url:         ""
+
+markdown_ext: "yml"
+
+collections_dir: ./metadata
+collections:
+  - apis
+  - caches
+  - contexts
+  - modules
+  - schemas
+  - tables
+  - topics

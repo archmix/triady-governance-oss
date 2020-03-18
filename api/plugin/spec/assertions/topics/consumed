@@ -1,0 +1,1 @@
+{"path":"topics/consumed","id":"consumed","name":"Consumed Topic","description":"Describe your topic","producedBy":[],"consumedBy":[{"id":"module","name":"Module","path":"modules/module"}],"schema":{"id":"schema","name":"Schema","path":"schemas/schema"}}

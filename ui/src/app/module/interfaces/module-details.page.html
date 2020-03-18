@@ -1,0 +1,76 @@
+<div class="animated fadeIn">
+    <div class="card-group mb-4">
+        <div class="card">
+            <div class="card-body">
+                <div class="h1 text-muted text-right mb-4">
+                    <i class="{{settings.api.icon}}"></i>
+                </div>
+                <div class="h4 mb-0">{{module.numberOfApis}}</div>
+                <small class="text-muted text-uppercase font-weight-bold">{{settings.api.plural}}</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="h1 text-muted text-right mb-4">
+                    <i class="{{settings.cache.icon}}"></i>
+                </div>
+                <div class="h4 mb-0">{{module.numberOfCaches}}</div>
+                <small class="text-muted text-uppercase font-weight-bold">{{settings.cache.plural}}</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="h1 text-muted text-right mb-4">
+                    <i class="{{settings.table.icon}}"></i>
+                </div>
+                <div class="h4 mb-0">{{module.numberOfTables}}</div>
+                <small class="text-muted text-uppercase font-weight-bold">{{settings.table.plural}}</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="h1 text-muted text-right mb-4">
+                    <i class="{{settings.topic.icon}}"></i>
+                </div>
+                <div class="h4 mb-0">{{module.numberOfTopics}}</div>
+                <small class="text-muted text-uppercase font-weight-bold">{{settings.topic.plural}}</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h4 class="card-title text-muted">Information</h4>
+                </div>
+            </div>
+            <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Context</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">{{module.name}}</td>
+                    <td>{{module.description}}</td>
+                    <td><a routerLink="/{{module.context.path}}">{{module.context.name}}</a></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+    <div class="card-columns module-columns">
+        <api-list [data]="module.apis"></api-list>
+        <table-list [data]="module.tables"></table-list>
+        
+        <cache-list [data]="module.caches"></cache-list>
+        <topic-list [data]="module.consumesTopics" label="Consumes Topics"></topic-list>
+        
+        <topic-list [data]="module.producesTopics" label="Produces Topics"></topic-list>
+    </div>
+</div>

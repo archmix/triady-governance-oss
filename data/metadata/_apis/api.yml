@@ -1,0 +1,6 @@
+---
+moduleId: "module"
+apiName: "API"
+apiDescription: "Describe your API"
+apiSwaggerFile: "https://petstore.swagger.io/v2/swagger.json"
+apiGraphQLFile: "/data/graphql-schemas/product.gqs"

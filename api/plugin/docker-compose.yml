@@ -1,0 +1,5 @@
+jekyll:
+    image: jekyll/jekyll
+    volumes:
+        - .:/srv/jekyll
+    command: jekyll build

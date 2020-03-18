@@ -1,0 +1,21 @@
+version: "2"
+
+services:
+    api:
+        build:
+            context: ./api
+        volumes:
+            - ./api:/app/site
+            - ./data/metadata:/app/site/metadata
+            - ./ui/src/web-api:/app/site/web-api
+    ui:
+        build:
+            context: ./ui
+        volumes:
+            - "./ui:/app"
+            - "./data/graphql-schemas:/app/src/data/graphql-schemas"
+            - "./data/json-schemas:/app/src/data/json-schemas"
+            - "./data/swagger:/app/src/data/swagger"
+            - "/app/node_modules"
+        ports:
+            - "4200:4200"

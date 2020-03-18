@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-start align-items-center w-25">
+            <div class="h4 mr-2 text-muted">
+                <i class="{{icon}}" aria-hidden="true"></i>
+            </div>
+            <h4 class="card-title mr-2 text-muted">{{label}}</h4>
+        </div>
+
+        <div class="input-group mb-3">
+            <input #search (keydown.enter)="onSearch(search.value)" type="text" class="form-control" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+
+        <ng2-smart-table [settings]="gridSettings" [source]="datasource"></ng2-smart-table>
+    </div>
+</div>
