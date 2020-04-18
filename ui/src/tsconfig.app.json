@@ -10,12 +10,6 @@
       "@angular/*": [
         "../node_modules/@angular/*"
       ],
-      "api/*" : [
-        "app/api/*",
-        "app/api/domain/*",
-        "app/api/infra/*",
-        "app/api/interfaces/*",
-      ],
       "cache/*" : [
         "app/cache/*",
         "app/cache/domain/*",
@@ -39,6 +33,12 @@
         "app/dashboard/domain/*",
         "app/dashboard/infra/*",
         "app/dashboard/interfaces/*",
+      ],
+      "endpoint/*" : [
+        "app/endpoint/*",
+        "app/endpoint/domain/*",
+        "app/endpoint/infra/*",
+        "app/endpoint/interfaces/*",
       ],
       "environments/*" : [
         "environments/*",

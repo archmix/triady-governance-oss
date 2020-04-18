@@ -8,7 +8,7 @@ markdown:          kramdown
 markdown_ext: "yml"
 
 collections:
-  - apis
+  - endpoints
   - caches
   - contexts
   - modules

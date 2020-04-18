@@ -10,7 +10,7 @@ import { Dashboard } from 'dashboard/dashboard.model'
 export class DashboardPage implements OnInit {
   
   dashboard : Dashboard = new Dashboard()
-  apis : Identity[] = []
+  endpoints : Identity[] = []
   caches : Identity[] = []
   contexts : Identity[] = []
   modules : Identity[] = []
@@ -24,7 +24,7 @@ export class DashboardPage implements OnInit {
   ngOnInit() {
     this.service.getHome().subscribe(dashboard =>{
       this.dashboard = dashboard
-      this.apis = dashboard.apis
+      this.endpoints = dashboard.endpoints
       this.caches = dashboard.caches
       this.contexts = dashboard.contexts
       this.modules = dashboard.modules

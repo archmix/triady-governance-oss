@@ -30,10 +30,10 @@
     <div class="card">
       <div class="card-body">
         <div class="h1 text-muted text-right mb-4">
-          <i class="{{settings.api.icon}}"></i>
+          <i class="{{settings.endpoint.icon}}"></i>
         </div>
-        <div class="h4 mb-0">{{dashboard.numberOfApis}}</div>
-        <small class="text-muted text-uppercase font-weight-bold">{{settings.api.plural}}</small>
+        <div class="h4 mb-0">{{dashboard.numberOfEndpoints}}</div>
+        <small class="text-muted text-uppercase font-weight-bold">{{settings.endpoint.plural}}</small>
       </div>
     </div>
     <div class="card">
@@ -74,7 +74,7 @@
     <schema-list [data]="schemas"></schema-list>
     <table-list [data]="tables"></table-list>
 
-    <api-list [data]="apis"></api-list>
+    <endpoint-list [data]="endpoints"></endpoint-list>
     <topic-list [data]="topics"></topic-list>
   </div>
 

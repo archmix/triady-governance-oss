@@ -23,10 +23,10 @@
         <div class="card">
             <div class="card-body">
                 <div class="h1 text-muted text-right mb-4">
-                    <i class="{{settings.api.icon}}"></i>
+                    <i class="{{settings.endpoint.icon}}"></i>
                 </div>
-                <div class="h4 mb-0">{{context.numberOfApis}}</div>
-                <small class="text-muted text-uppercase font-weight-bold">{{settings.api.plural}}</small>
+                <div class="h4 mb-0">{{context.numberOfEndpoints}}</div>
+                <small class="text-muted text-uppercase font-weight-bold">{{settings.endpoint.plural}}</small>
             </div>
         </div>
         <div class="card">
@@ -86,7 +86,7 @@
         <module-list [data]="context.modules"></module-list>
         <schema-list [data]="context.schemas"></schema-list>
 
-        <api-list [data]="context.apis"></api-list>
+        <endpoint-list [data]="context.endpoints"></endpoint-list>
         
         <table-list [data]="context.tables"></table-list>
         <cache-list [data]="context.caches"></cache-list>

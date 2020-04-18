@@ -8,7 +8,7 @@ export class Context {
     id: number
     name: string
     description: string
-    numberOfApis : number
+    numberOfEndpoints : number
     numberOfCaches : number
     numberOfModules : number
     numberOfSchemas : number
@@ -17,7 +17,7 @@ export class Context {
 
     modules : Identity[]
     schemas: Identity[]
-    apis: Identity[]
+    endpoints: Identity[]
     caches: Identity[]
     tables: Identity[]
     topics: Identity[]

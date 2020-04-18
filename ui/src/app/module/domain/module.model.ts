@@ -9,12 +9,12 @@ export class Module {
     name: string
     description: string
     context: Identity
-    numberOfApis : number
+    numberOfEndpoints : number
     numberOfCaches : number
     numberOfTables : number
     numberOfTopics : number
     
-    apis: Identity[]
+    endpoints: Identity[]
     caches: Identity[]
     tables: Identity[]
     consumesTopics: Identity[]

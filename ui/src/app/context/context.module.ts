@@ -6,7 +6,7 @@ import { ContextDetailsPage } from './interfaces/context-details.page'
 import { ContextListComponent } from './interfaces/context-list.component'
 import { ContextService } from './infra/context.service'
 
-import { ApiModule } from 'api/api.module'
+import { EndpointModule } from 'endpoint/endpoint.module'
 import { CacheModule } from 'cache/cache.module'
 import { ModuleModule } from 'module/module.module'
 import { SchemaModule } from 'schema/schema.module'
@@ -15,7 +15,7 @@ import { TableModule } from 'table/table.module'
 @NgModule({
     imports: [
         CommonModule,
-        ApiModule,
+        EndpointModule,
         CacheModule,
         ModuleModule,
         SchemaModule,

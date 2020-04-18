@@ -6,7 +6,7 @@ import { ModuleGridPage } from './interfaces/module-grid.page'
 import { ModuleDetailsPage } from './interfaces/module-details.page'
 import { ModuleService } from './infra/module.service'
 
-import { ApiModule } from 'api/api.module'
+import { EndpointModule } from 'endpoint/endpoint.module'
 import { CacheModule } from 'cache/cache.module'
 import { TableModule } from 'table/table.module'
 
@@ -18,7 +18,7 @@ import { TopicService } from 'topic/topic.service'
 @NgModule({
     imports: [
         CommonModule,
-        ApiModule,
+        EndpointModule,
         CacheModule,
         TableModule,
     ],
@@ -34,7 +34,7 @@ import { TopicService } from 'topic/topic.service'
         ModuleListComponent,
         ModuleGridPage,
         ModuleDetailsPage,
-        ApiModule,
+        EndpointModule,
         CacheModule,
         TableModule,
 

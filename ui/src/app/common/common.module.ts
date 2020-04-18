@@ -7,7 +7,6 @@ import { SchemaFileService } from 'common/schema-file.service';
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import {HttpClientModule} from '@angular/common/http';
-import { SwaggerUIComponent } from './interfaces/swagger-ui.component'
 
 export function getHighlightLanguages() {
     return {
@@ -27,7 +26,6 @@ export function getConfig(){
     declarations: [
         LinkRenderer,
         CenterTextRenderer,
-        SwaggerUIComponent,
     ],
     imports: [
         RouterModule,
@@ -42,7 +40,6 @@ export function getConfig(){
     exports: [
         LinkRenderer,
         CenterTextRenderer,
-        SwaggerUIComponent,
         HighlightModule,
         RouterModule,
         Ng2SmartTableModule,

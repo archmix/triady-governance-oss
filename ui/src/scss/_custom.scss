@@ -57,7 +57,7 @@
   }
 }
 
-.module-columns {
+.endpoint-columns {
   @include media-breakpoint-up(xs) {
     column-count: 1;
   }
@@ -93,3 +93,35 @@
   }
 }
 
+.badge-POST {
+  background-color: $_color-post;
+  color : $white;
+}
+
+.badge-GET {
+  background-color: $_color-get;
+  color : $white;
+}
+
+.badge-PUT {
+  background-color: $_color-put;
+}
+
+.badge-DELETE {
+  background-color: $_color-delete;
+  color : $white;
+}
+
+.badge-HEAD {
+  background-color: $_color-head;
+  color : $white;
+}
+
+.badge-PATCH {
+  background-color: $_color-patch;
+}
+
+.badge-OPTIONS {
+  background-color: $_color-options;
+  color : $white;
+}

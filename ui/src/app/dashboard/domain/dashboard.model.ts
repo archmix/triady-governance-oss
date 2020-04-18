@@ -2,14 +2,14 @@ import {Identity} from 'common/identity.model'
 
 export class Dashboard {
     path : string
-    numberOfApis : number
+    numberOfEndpoints : number
     numberOfCaches : number
     numberOfContexts : number
     numberOfModules : number
     numberOfSchemas : number
     numberOfTables : number
     numberOfTopics : number
-    apis : Identity[]
+    endpoints : Identity[]
     caches : Identity[]
     contexts : Identity[]
     modules : Identity[]

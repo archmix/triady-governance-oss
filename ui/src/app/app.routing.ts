@@ -5,8 +5,8 @@ import { Routes, RouterModule } from '@angular/router'
 import { DefaultLayoutComponent } from './containers'
 import { DashboardModule } from 'dashboard/dashboard.module'
 import { DashboardPage } from 'dashboard/dashboard.page'
-import { ApiGridPage } from 'api/api-grid.page'
-import { ApiDetailsPage } from 'api/api-details.page'
+import { EndpointGridPage } from 'endpoint/endpoint-grid.page'
+import { EndpointDetailsPage } from 'endpoint/endpoint-details.page'
 import { CacheDetailsPage } from 'cache/cache-details.page'
 import { CacheGridPage } from 'cache/cache-grid.page'
 import { ContextGridPage } from 'context/context-grid.page'
@@ -19,7 +19,7 @@ import { TableDetailsPage } from 'table/table-details.page'
 import { TableGridPage } from 'table/table-grid.page'
 import { TopicDetailsPage } from 'topic/topic-details.page'
 import { TopicGridPage } from 'topic/topic-grid.page'
-import { apiSettings, cacheSettings, contextSettings, dashboardSettings, moduleSettings, schemaSettings, tableSettings, topicSettings } from 'common/asset-settings.model'
+import { endpointSettings, cacheSettings, contextSettings, dashboardSettings, moduleSettings, schemaSettings, tableSettings, topicSettings } from 'common/asset-settings.model'
 
 export const routes: Routes = [
   {
@@ -35,17 +35,17 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'apis',
-        component: ApiGridPage,
+        path: 'endpoints',
+        component: EndpointGridPage,
         data: {
-          title: apiSettings.singular
+          title: endpointSettings.singular
         }
       },
       {
-        path: 'apis/:id',
-        component: ApiDetailsPage,
+        path: 'endpoints/:id',
+        component: EndpointDetailsPage,
         data: {
-          title: apiSettings.singular
+          title: endpointSettings.singular
         }
       },
       {

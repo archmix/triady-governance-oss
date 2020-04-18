@@ -34,9 +34,9 @@ export const schemaSettings:AssetSettings = {
     icon: 'fa fa-file-code-o'
 }
 
-export const apiSettings:AssetSettings = {
-    singular: 'API',
-    plural: 'APIs',
+export const endpointSettings:AssetSettings = {
+    singular: 'Endpoint',
+    plural: 'Endpoints',
     icon: 'fa fa-cloud'
 }
 
@@ -63,7 +63,7 @@ export class AssetsSettings {
     public static dashboard : AssetSettings = dashboardSettings;
     public static module : AssetSettings = moduleSettings;
     public static schema : AssetSettings = schemaSettings;
-    public static api : AssetSettings = apiSettings;
+    public static endpoint : AssetSettings = endpointSettings;
     public static cache : AssetSettings = cacheSettings;
     public static table : AssetSettings = tableSettings;
     public static topic : AssetSettings = topicSettings;

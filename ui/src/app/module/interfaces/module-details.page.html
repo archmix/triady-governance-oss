@@ -3,10 +3,10 @@
         <div class="card">
             <div class="card-body">
                 <div class="h1 text-muted text-right mb-4">
-                    <i class="{{settings.api.icon}}"></i>
+                    <i class="{{settings.endpoint.icon}}"></i>
                 </div>
-                <div class="h4 mb-0">{{module.numberOfApis}}</div>
-                <small class="text-muted text-uppercase font-weight-bold">{{settings.api.plural}}</small>
+                <div class="h4 mb-0">{{module.numberOfEndpoints}}</div>
+                <small class="text-muted text-uppercase font-weight-bold">{{settings.endpoint.plural}}</small>
             </div>
         </div>
         <div class="card">
@@ -65,7 +65,7 @@
     </div>
 
     <div class="card-columns module-columns">
-        <api-list [data]="module.apis"></api-list>
+        <endpoint-list [data]="module.endpoints"></endpoint-list>
         <table-list [data]="module.tables"></table-list>
         
         <cache-list [data]="module.caches"></cache-list>

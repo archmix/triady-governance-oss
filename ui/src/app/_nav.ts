@@ -1,5 +1,5 @@
 import { INavData } from '@coreui/angular';
-import { contextSettings, dashboardSettings, moduleSettings, schemaSettings, apiSettings, cacheSettings, tableSettings, topicSettings } from 'common/interfaces/asset-settings.model'
+import { contextSettings, dashboardSettings, moduleSettings, schemaSettings, endpointSettings, cacheSettings, tableSettings, topicSettings } from 'common/interfaces/asset-settings.model'
 
 export const navItems: INavData[] = [
   {
@@ -27,9 +27,9 @@ export const navItems: INavData[] = [
     icon: schemaSettings.icon
   },
   {
-    name: apiSettings.plural,
-    url: '/apis',
-    icon: apiSettings.icon
+    name: endpointSettings.plural,
+    url: '/endpoints',
+    icon: endpointSettings.icon
   },
   {
     name: cacheSettings.plural,

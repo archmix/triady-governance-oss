@@ -27,8 +27,8 @@ export class ContextGridPage extends Datasource {
                 title: 'Description',
                 filter: false
             },
-            numberOfApis: {
-                title: '# of Apis',
+            numberOfEndpoints: {
+                title: '# of Endpoints',
                 class: 'text-center',
                 filter: false,
                 type: 'custom',

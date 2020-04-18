@@ -1,0 +1,10 @@
+---
+moduleId: "module"
+endpointName: "Endpoint"
+endpointUri: "endpoint/uri"
+endpointMethod: "POST"
+endpointDescription: "Describe your Endpoint"
+endpointRequestFile: "/data/json-schemas/product.jss"
+endpointResponseFile: "/data/json-schemas/product.jss"
+endpointErrorResponseFile: "/data/json-schemas/product.jss"
+endpointStatusCodes: 200, 422
