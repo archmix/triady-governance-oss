@@ -18,11 +18,16 @@ module Plugin
     MODULE = 'module'
     SCHEMA = 'schema'
 
-    APIS = 'apis'
-    NUMBER_OF_APIS = 'numberOfApis'
+    ENDPOINTS = 'endpoints'
+    NUMBER_OF_ENDPOINTS = 'numberOfEndpoints'
     GRAPHQL_FILE = 'graphQLFile'
-    SWAGGER_FILE = 'swaggerFile'
-
+    REQUEST_FILE = 'requestFile'
+    RESPONSE_FILE = 'responseFile'
+    ERROR_RESPONSE_FILE = 'errorResponseFile'
+    URI = 'uri'
+    STATUS_CODES = 'statusCodes'
+    METHOD = 'method'
+    
     CACHES = 'caches'
     NUMBER_OF_CACHES = 'numberOfCaches'
     
@@ -49,10 +54,15 @@ module Plugin
   end
 
   class YAMLFields
-    API_NAME = 'apiName'
-    API_DESCRIPTION = 'apiDescription'
-    API_GRAPHQL_FILE = 'apiGraphQLFile'
-    API_SWAGGER_FILE = 'apiSwaggerFile'
+    ENDPOINT_NAME = 'endpointName'
+    ENDPOINT_URI = 'endpointUri'
+    ENDPOINT_METHOD = 'endpointMethod'
+    ENDPOINT_STATUS_CODES = 'endpointStatusCodes'
+    ENDPOINT_DESCRIPTION = 'endpointDescription'
+    ENDPOINT_GRAPHQL_FILE = 'endpointGraphQLFile'
+    ENDPOINT_REQUEST_FILE = 'endpointRequestFile'
+    ENDPOINT_RESPONSE_FILE = 'endpointResponseFile'
+    ENDPOINT_ERROR_RESPONSE_FILE = 'endpointErrorResponseFile'
 
     CACHE_NAME = 'cacheName'
     CACHE_DESCRIPTION = 'cacheDescription'

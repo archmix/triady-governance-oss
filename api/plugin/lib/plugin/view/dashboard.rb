@@ -5,7 +5,7 @@ module Plugin
     API_ENDPOINT = 'dashboards/home'
 
     def self.create
-      HomeDashboardView.new(ApisCollection.instance.identities,
+      HomeDashboardView.new(EndpointsCollection.instance.identities,
                         CachesCollection.instance.identities,
                         ContextsCollection.instance.identities,
                         ModulesCollection.instance.identities,
@@ -16,9 +16,9 @@ module Plugin
 
     private
 
-    def initialize(apis, caches, contexts, modules, schemas, tables, topics)
+    def initialize(endpoints, caches, contexts, modules, schemas, tables, topics)
       super(API_ENDPOINT)
-      self.apis apis
+      self.endpoints endpoints
       self.caches caches
       self.contexts contexts
       self.modules modules

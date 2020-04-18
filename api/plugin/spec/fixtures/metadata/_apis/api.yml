@@ -1,7 +1,0 @@
----
-moduleId: "module"
-apiName: "API"
-apiDescription: "Describe your API"
-apiSwaggerFile: "path/to/swagger.yml"
-apiGraphQLFile: "path/to/graphql.schema"
----

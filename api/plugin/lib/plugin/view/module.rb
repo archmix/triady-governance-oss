@@ -4,7 +4,7 @@ module Plugin
   class ModuleView < Renderable
     def self.create(mod)
       context = ContextsCollection.instance.get_by_id mod.context_id
-      apis = ApisCollection.instance.get_by_module mod
+      endpoints = EndpointsCollection.instance.get_by_module mod
       caches = CachesCollection.instance.get_by_module mod
       tables = TablesCollection.instance.get_by_module mod
       
@@ -22,19 +22,19 @@ module Plugin
       
       ModuleView.new(context.to_identity,
                       mod,
-                      apis.map { |_id, api| api.to_identity },
+                      endpoints.map { |_id, endpoint| endpoint.to_identity },
                       caches.map { |_id, cache| cache.to_identity },
                       tables.map { |_id, table| table.to_identity },
                       consumesTopics, 
                       producesTopics)
     end
 
-    def initialize(context, mod, apis, caches, tables, consumesTopics, producesTopics)
+    def initialize(context, mod, endpoints, caches, tables, consumesTopics, producesTopics)
       mod.copy_to_hash self
       self.delete MetadataFields::CONTEXT_ID
       
       self[MetadataFields::CONTEXT] = context
-      self.apis apis
+      self.endpoints endpoints
       self.caches caches
       self.tables tables
       self[MetadataFields::CONSUMES_TOPICS] = consumesTopics

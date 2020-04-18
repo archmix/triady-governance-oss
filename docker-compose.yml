@@ -1,5 +1,5 @@
 version: "2"
-
+    
 services:
     api:
         build:
@@ -8,6 +8,8 @@ services:
             - ./api:/app/site
             - ./data/metadata:/app/site/metadata
             - ./ui/src/web-api:/app/site/web-api
+        env_file: docker.env
+        user: "${UID}:${GID}"
     ui:
         build:
             context: ./ui
@@ -19,3 +21,5 @@ services:
             - "/app/node_modules"
         ports:
             - "4200:4200"
+        env_file: docker.env
+        user: "${UID}:${GID}"

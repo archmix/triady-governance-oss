@@ -18,12 +18,12 @@ RSpec.describe Plugin do
     site.process
   end
 
-  it 'creates api home json file' do
-    assert_asset('apis/home')
+  it 'creates endpoint home json file' do
+    assert_asset('endpoints/home')
   end
 
-  it 'creates api json file' do
-    assert_asset('apis/api')
+  it 'creates endpoint json file' do
+    assert_asset('endpoints/endpoint')
   end
 
   it 'creates cache json file' do

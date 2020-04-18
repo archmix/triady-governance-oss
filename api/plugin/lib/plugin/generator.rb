@@ -9,7 +9,7 @@ module Plugin
         post_write(site, page)
       end
       
-      collections = ["apis", "caches", "contexts", "modules", "schemas", "tables", "topics"]
+      collections = ["endpoints", "caches", "contexts", "modules", "schemas", "tables", "topics"]
       collections.each do |name|
         collection(name).clear
       end
@@ -35,9 +35,9 @@ module Plugin
         render site, SchemaView.create(schema)
       end
 
-      render site, ApisView.create
-      ApisCollection.instance.values.each do |api|
-        render site, ApiView.create(api)
+      render site, EndpointsView.create
+      EndpointsCollection.instance.values.each do |endpoint|
+        render site, EndpointView.create(endpoint)
       end
 
       render site, CachesView.create

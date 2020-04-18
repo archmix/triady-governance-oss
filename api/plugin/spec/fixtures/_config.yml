@@ -6,7 +6,7 @@ markdown_ext: "yml"
 
 collections_dir: ./metadata
 collections:
-  - apis
+  - endpoints
   - caches
   - contexts
   - modules

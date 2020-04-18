@@ -1,0 +1,11 @@
+---
+moduleId: "module"
+endpointName: "Endpoint"
+endpointUri: "endpoint/uri"
+endpointMethod: "POST"
+endpointDescription: "Describe your Endpoint"
+endpointGraphQLFile: "path/to/graphql.schema"
+endpointRequestFile: "path/to/request.schema"
+endpointResponseFile: "path/to/response.schema"
+endpointErrorResponseFile: "path/to/error_response.schema"
+endpointStatusCodes: 200, 422

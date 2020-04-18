@@ -29,9 +29,9 @@ module Plugin
       self[MetadataFields::NUMBER_OF_SCHEMAS] = schemas.size
     end
 
-    def apis apis
-      self[MetadataFields::APIS] = apis
-      self[MetadataFields::NUMBER_OF_APIS] = apis.size
+    def endpoints endpoints
+      self[MetadataFields::ENDPOINTS] = endpoints
+      self[MetadataFields::NUMBER_OF_ENDPOINTS] = endpoints.size
     end
 
     def caches caches
