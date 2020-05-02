@@ -4,6 +4,13 @@ module Plugin
   class CacheView < Renderable
     def self.create(cache)
       mod = ModulesCollection.instance.get_by_id cache.module_id
+
+      if(mod.nil?)
+        warn "Module with id #{cache.module_id} not found. Did you define it?"
+      else
+        mod = mod.to_identity
+      end
+
       schema = nil
 
       if(!cache.schema_id.nil?)
@@ -14,8 +21,7 @@ module Plugin
         schema = schema.to_identity
       end
 
-      CacheView.new(mod.to_identity, schema,
-                  cache)
+      CacheView.new(mod, schema, cache)
     end
 
     def initialize(mod, schema, cache)
