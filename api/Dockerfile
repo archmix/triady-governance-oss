@@ -1,5 +1,5 @@
 # base image
-FROM jekyll/jekyll
+FROM jekyll/jekyll:3
 
 RUN mkdir -p /app/site
 VOLUME  /app/site
