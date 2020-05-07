@@ -1,5 +1,5 @@
 version: "2"
-    
+
 services:
     api:
         build:
@@ -8,18 +8,13 @@ services:
             - ./api:/app/site
             - ./data/metadata:/app/site/metadata
             - ./ui/src/web-api:/app/site/web-api
-        env_file: docker.env
-        user: "${UID}:${GID}"
     ui:
         build:
             context: ./ui
         volumes:
             - "./ui:/app"
-            - "./data/graphql-schemas:/app/src/data/graphql-schemas"
-            - "./data/json-schemas:/app/src/data/json-schemas"
-            - "./data/swagger:/app/src/data/swagger"
+            - "./data/graphql:/app/src/data/graphql"
+            - "./data/types:/app/src/data/types"
             - "/app/node_modules"
         ports:
             - "4200:4200"
-        env_file: docker.env
-        user: "${UID}:${GID}"

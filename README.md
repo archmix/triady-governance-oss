@@ -11,6 +11,9 @@ If you need assistance to install docker and docker compose, please follow up th
 After you get docker compose running in your machine, just open a terminal and execute
 `docker-compose up`
 
+When web server is ready and open for connections, you can put your browser to `http://localhost:4200`. If you are using windows or mac os, you need to point to docker machine ip instead of localhost.
+
+
 ## Oficial Documentation
 You can find official documentation at [Archmix website](https://archmix.org)
 
