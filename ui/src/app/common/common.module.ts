@@ -10,9 +10,9 @@ import {HttpClientModule} from '@angular/common/http';
 
 export function getHighlightLanguages() {
     return {
-        typescript: () => import('highlight.js/lib/languages/typescript'),
         json: () => import('highlight.js/lib/languages/json'),
-        xml: () => import('highlight.js/lib/languages/xml')
+        xml: () => import('highlight.js/lib/languages/xml'),
+        yaml: () => import('highlight.js/lib/languages/yaml')
     };
 }
 
@@ -48,14 +48,6 @@ export function getConfig(){
     ],
     providers: [
         SchemaFileService,
-        {
-            provide: HIGHLIGHT_OPTIONS,
-            useValue: {
-                languages: getHighlightLanguages(),
-                config : getConfig(),
-                lineNumbers: true
-            }
-        }
     ]
 })
 export class CommonModule { }

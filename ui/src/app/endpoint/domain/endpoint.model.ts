@@ -19,5 +19,6 @@ export class Endpoint {
     
     constructor(){
         this.module = new Identity()
+        this.statusCodes = []
     }
 }
