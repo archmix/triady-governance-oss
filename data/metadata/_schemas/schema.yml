@@ -2,4 +2,4 @@
 contextId: "context"
 schemaName: "Schema"
 schemaDescription: "Describe your schema"
-schemaFile: "/data/json-schemas/product.jss"
+schemaFile: "/data/types/product"

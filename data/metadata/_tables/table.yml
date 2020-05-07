@@ -2,4 +2,4 @@
 moduleId: "module"
 tableName: "Table"
 tableDescription: "Describe your Table"
-tableSchemaFile: "/data/json-schemas/product.jss"
+tableSchemaFile: "/data/types/product"

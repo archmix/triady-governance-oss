@@ -1,0 +1,6 @@
+id: UUID
+name: String
+price: BigDecimal
+category:
+    id: UUID
+    name: String
