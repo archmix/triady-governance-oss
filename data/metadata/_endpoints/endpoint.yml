@@ -6,5 +6,5 @@ endpointMethod: "POST"
 endpointDescription: "Describe your Endpoint"
 endpointRequestFile: "/data/types/product"
 endpointResponseFile: "/data/types/product"
-endpointErrorResponseFile: "/data/types/product"
+endpointErrorResponseFile: "/data/types/error"
 endpointStatusCodes: 200, 422

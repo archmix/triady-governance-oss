@@ -36,7 +36,7 @@ jobs:
           image_version: latest
 
   release-tag:
-    executor: docker-executor
+    executor: docker/default
     steps:
       - setup_remote_docker
       - attach_workspace:
